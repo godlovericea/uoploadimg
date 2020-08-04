@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1478339_0qcu4b2w52jp.css">
+    <!-- 使用CDN加速的CSS文件，配置在vue.config.js下 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>
+    <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="preload" as="style">
+    <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet">
+    <% } %>
+
+    <!-- 使用CDN加速的JS文件，配置在vue.config.js下 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
+    <link href="<%= htmlWebpackPlugin.options.cdn.js[i] %>" rel="preload" as="script">
+    <% } %>
+    
+    <style>
+        html,body{
+            height: 100%;
+        }
+        #app{
+            background-color: #F3F3F3;
+        }
+    </style>
+    <title>人脸识别照片采集</title>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but vue-project-demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- 使用CDN加速的JS文件，配置在vue.config.js下 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+    <% } %>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+        window.onload = function () {
+            // 加onload，会出现加载页面集体缩放问题
+            window.onresize = function () {
+                getRem(750, 100)
+            }
+
+            function getRem(pwidth, prem) {
+                var html = document.getElementsByTagName("html")[0];
+                var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+                var search = window.location.search
+                html.style.fontSize = oWidth / pwidth * prem + "px";
+                if(oWidth > 768) {
+                    // window.location.href = window.location.href.replace(/testotc.biyaco.com/i, 'pay.biya168.com')
+                    window.location.href = window.location.href.replace(/m.biyaclub.com/i, 'diccy.biyaclub.com')
+                }
+            }
+            /* 720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+            为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等 */
+            getRem(750, 100)
+        }
+    </script>
+</body>
+
+</html>

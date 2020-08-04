@@ -1,0 +1,597 @@
+#app{
+    height: 100%;
+}
+.payTypeGroups{
+    .el-radio-group{
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        .el-radio{
+            color: #ffffff;
+            font-size: 0.24rem;
+            display: flex;
+            align-items: center;
+            margin: 0 0.4rem;
+            .el-radio__input.is-checked .el-radio__inner{
+                border-color: #0550a4;
+                background:#0550a4;
+            }
+            .el-radio__input.is-checked+.el-radio__label{
+                color: #ffffff;
+            }
+        }
+    }
+}
+.myInput{
+    .van-uploader__input-wrapper{
+        display: flex;
+        margin-left: 0.4rem;
+    }
+    .el-upload{
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        margin-left: 0.2rem;
+    }
+}
+.right{
+    .van-button--primary{
+        background-color: #1677E8;
+        border: 1px solid #1677E8;
+    }
+}
+.vandialog{
+    border-radius: 0.36rem;
+    .dialogBox{
+        padding: 0 0.4rem;
+        .el-dialog__header{
+            padding: 0;
+        }
+        .vandialogfooter{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0.4rem 0;
+            .van-button--small{
+                margin: 0 0.4rem;
+            }
+        }
+    }
+    .el-dialog__body{
+        padding: 0.2rem 0;
+    }
+    .nextBox{
+        padding: 0 0.3rem;
+        .phone{
+            color: #1677E8;
+            font-size: 0.5rem;
+            text-align: center;
+        }
+        .vandialogfooter{
+            display: flex;
+            justify-content: center;
+            margin: 0.4rem 0;
+            .sureBtn{
+                background-color: #1677E8;
+                color: #ffffff;
+                padding: 0.15rem 0.3rem;
+                border-radius: 0.3rem;
+            }
+        }
+    }
+}
+.apealItems{
+    .myRaidoBox{
+        display: flex;
+        flex-direction: column;
+        .el-radio{
+            height: 0.45rem;
+        }
+    }
+    .van-dropdown-menu__item{
+        background-color: #ECECEC;
+        border-radius: 0.5rem;
+    }
+    .meta,.mobile,.email{
+        background-color: #ECECEC;
+        border-radius: 0.5rem;
+    }
+    .van-uploader__upload{
+        background-color: #ECECEC;
+    }
+    .uploadIcon{
+        padding: 0.3rem;
+        background-color: #ECECEC;
+        border-radius: 0.3rem;
+    }
+}
+.payBox{
+    padding: 0.3rem 0;
+        .nearless{
+            margin: 0;
+            font-size:0.28px;
+            font-weight:bold;
+            color:rgba(40,40,40,1);
+        }
+        .el-radio-group{
+            display: flex;
+            flex-direction: column;
+            .el-radio{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // margin:0.1rem 0;
+                padding: 0.2rem;
+                border-radius: 0.3rem;
+                width: 94%;
+                .el-radio__label{
+                    width: 90%;
+                    font-size: 0.24rem;
+                    .sellName{
+                        margin: 0.10rem 0;
+                        .payAccountClass{
+                            margin:0 0.2rem;
+                        }
+                    }
+                    .payTypeName{
+                        color: #1677E8;
+                        font-weight:bold;
+                    }
+                }
+            }
+            .is-checked{
+                background-color: #ECECEC;
+            }
+        }
+        h3{
+            font-size:0.48rem;
+            font-family:PingFangSC-Medium,PingFang SC;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            margin-bottom: 0.6rem;
+        }
+        .apealItems{
+            margin: 0.3rem 0;
+            .subtitle{
+                font-size:0.24rem;
+                font-family:PingFangSC-Regular,PingFang SC;
+                font-weight:400;
+                color:rgba(170,176,184,1);
+                margin-bottom: 0.2rem;
+            }
+            .postAppealData{
+                height:0.8rem;
+                background:rgba(72,123,237,1);
+                border-radius:2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+            }
+            .uploadTips{
+                font-family:PingFangSC-Regular,PingFang SC;
+                font-weight:400;
+                color:rgba(170,176,184,1);
+                font-size:0.22rem;
+            }
+            .el-upload--picture-card{
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+            }
+            .el-upload-list--picture-card .el-upload-list__item{
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+            }
+        }
+        .btns{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+}
+.payeeimgClass{
+    width: 80%;
+    border-radius: 0.36rem;
+    .el-dialog__header{
+        padding: 0;
+    }
+    .el-dialog--center .el-dialog__body{
+        padding: 0 20px;
+    }
+    .alipayImg{
+        width: 100%;
+    }
+    .footerBtn{
+        text-align: center;
+        margin-top: 0.6rem;
+        .sureCncelOrerBtn{
+            background-color: #1677E8;
+            color: #ffffff;
+            width: 3rem;
+        }
+    }
+}
+.myVanCell{
+    padding: 0.4rem;
+    .el-collapse-item__header{
+        background-color: rgba(245,245,245,1);
+    }
+    .el-collapse-item__wrap{
+        background-color: rgba(245,245,245,1);
+        .el-collapse-item__content{
+            color: #A0A0A0;
+        }
+    }
+}
+.el-button+.el-button{
+    margin: 0;
+}
+.homeDialog{
+    border-radius: 0.36rem;
+    .sureBtn{
+        background-color: #1677E8;
+        color: #ffffff;
+        font-weight: bold;
+        border: 1px solid #1677E8;
+        width: 2.5rem;
+    }
+    .tradeTypeDialog{
+        margin: 0.3rem 0;
+        .el-radio-group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .el-radio--small.is-bordered{
+                border-radius: 16px;
+            }
+        }
+    }
+    .diaBox{
+        .diaItems{
+            height: 0.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .diaLeft{
+                color: #A0A0A0;
+            }
+            .diaRight{
+                color: #282828;
+                font-weight: bold;
+            }
+            .diaTotal{
+                color: #459FEF;
+            }
+            .el-input-group__append, .el-input-group__prepend{
+                background-color: transparent;
+                color:#282828;
+                font-weight:bold;
+                font-size:0.24rem;
+            }
+        }
+    }
+}
+.sellAddPay{
+    border-radius: 0.30rem;
+    .el-dialog__header{
+        padding: 0 0.4rem;
+    }
+    .el-dialog__body{
+        padding: 0 0.4rem;
+    }
+    .formContent{
+        padding: 0.3rem 0;
+        .nearless{
+            margin: 0;
+            font-size:0.28px;
+            font-weight:bold;
+            color:rgba(40,40,40,1);
+        }
+        .el-radio-group{
+            display: flex;
+            flex-direction: column;
+            .el-radio{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // margin:0.1rem 0;
+                padding: 0.2rem;
+                border-radius: 0.3rem;
+                width: 90%;
+                .el-radio__label{
+                    width: 90%;
+                    font-size: 0.24rem;
+                    .sellName{
+                        margin: 0.10rem 0;
+                        .payAccountClass{
+                            margin:0 0.2rem;
+                        }
+                    }
+                    .payTypeName{
+                        color: #1677E8;
+                        font-weight:bold;
+                    }
+                }
+            }
+            .is-checked{
+                background-color: #ECECEC;
+            }
+        }
+        h3{
+            font-size:0.48rem;
+            font-family:PingFangSC-Medium,PingFang SC;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            margin-bottom: 0.6rem;
+        }
+        .apealItems{
+            margin: 0.3rem 0;
+            .subtitle{
+                font-size:0.24rem;
+                font-family:PingFangSC-Regular,PingFang SC;
+                font-weight:400;
+                color:rgba(170,176,184,1);
+                margin-bottom: 0.2rem;
+            }
+            .postAppealData{
+                height:0.8rem;
+                background:rgba(72,123,237,1);
+                border-radius:2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+            }
+            .uploadTips{
+                font-family:PingFangSC-Regular,PingFang SC;
+                font-weight:400;
+                color:rgba(170,176,184,1);
+                font-size:0.22rem;
+            }
+            .el-upload--picture-card{
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+            }
+            .el-upload-list--picture-card .el-upload-list__item{
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+            }
+        }
+        .btns{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .sureBtn{
+                background-color: #1677E8;
+                color: #ffffff;
+                font-weight: bold;
+                border: 1px solid #1677E8;
+                width: 200px;
+            }
+        }
+    }
+}
+.el-message{
+    padding: 10px;
+    .el-message__icon{
+        font-size: 0.4rem;
+    }
+}
+.payImgClass{
+    max-width: 100%;
+}
+.chatInput{
+    .el-input__inner{
+        border: none;
+    }
+}
+.popupMessageImg{
+    max-width: 3rem;
+}
+.dialogFooter{
+    text-align: center;
+}
+.pchomeDialog{
+    width: 450px;
+    .sureBtn{
+        background-color: #1677E8;
+        color: #ffffff;
+        font-weight: bold;
+        border: 1px solid #1677E8;
+        width: 200px;
+    }
+    .diaBox{
+        .diaItems{
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .diaLeft{
+                color: #A0A0A0;
+            }
+            .diaRight{
+                color: #282828;
+                font-weight: bold;
+            }
+            .diaTotal{
+                color: #459FEF;
+            }
+        }
+    }
+}
+.accountBox{
+    .el-radio{
+        display: flex;
+        align-items: center;
+        .el-radio__label{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.apealItemsBtn{
+    margin-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .sureBtn{
+        background-color: #1677E8;
+        color: #ffffff;
+        font-weight: bold;
+        border: 1px solid #1677E8;
+        width: 200px;
+    }
+}
+.legalAmountClass{
+    .el-input__inner{
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+    }
+}
+.sellOrderPayBox{
+    .sellName{
+        .el-button{
+            padding: 0;
+        }
+    }
+}
+.valcodeBox{
+    border-radius: 0.33rem;
+    .el-input-group__append{
+        background: transparent;
+        color: #1677E8;
+        .cuntdownBtn{
+            font-weight: 600;
+        }
+    }
+    .redTips{
+        color: #E03434;
+        font-size: 0.2rem;
+    }
+    .dialogFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .sureRelease{
+            background-color: #1677E8;
+            color: #ffffff;
+            width: 2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+.uptypeBox{
+    .el-select .el-input__inner:focus{
+        border: none;
+    }
+    .el-input__inner{
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        text-align: right;
+    }
+    .el-radio__input.is-checked+.el-radio__label{
+        color: #ffeb3b;
+    }
+    .el-radio__input.is-checked .el-radio__inner{
+        border-color: #ffeb3b;
+        background: #ffeb3b;
+    }
+    .el-radio.is-bordered.is-checked{
+        border-color: #ffeb3b;
+    }
+    .el-radio{
+        color: #ffffff;
+    }
+    .el-radio--small.is-bordered{
+        border-radius: 16px;
+    }
+    .el-radio{
+        margin: 0.2rem 0.3rem;
+        width: 2rem;
+    }
+    .el-radio.is-bordered+.el-radio.is-bordered{
+        margin: 0.2rem 0.3rem;
+    }
+    .el-radio-group{
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+.switchBox{
+    .el-tabs__nav-wrap::after{
+        width: 0;
+    }
+    .el-tabs__nav-scroll{
+        display: flex;
+        justify-content: center;
+    }
+    .el-tabs__item.is-active{
+        color: #1677E8;
+    }
+    .el-tabs__active-bar{
+        background-color: #1677E8;
+    }
+}
+.inputItems{
+    .amountInput {
+        width: 100%;
+        .el-input__inner{
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    }
+    .payTypeClass{
+        background-color: #1677E8;
+        color: #ffffff;
+        width: 100%;
+    }
+    .newPrice{
+        font-size: 0.28rem;
+        color: #282828;
+        text-align: center;
+    }
+}
+.uploadClass{
+    .van-uploader__preview-image{
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    .uploadBtnClass{
+        width: 3.2rem;
+        background:linear-gradient(158deg,rgba(52,124,242,1) 0%,rgba(106,106,250,1) 100%);
+        height: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.08rem;
+        margin: 0 0.08rem 0.08rem 0;
+        .upimg{
+            // width: 0.6rem;
+            height: 0.38rem;
+        }
+        .uptitle{
+            font-size: 0.32rem;
+            color: #ffffff;
+            margin-left: 0.16rem;
+        }
+    }
+}
+.resetUploadClass{
+    margin-top: 0.85rem;
+}
+
+
