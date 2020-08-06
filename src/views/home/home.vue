@@ -12,12 +12,19 @@
         <div class="btnGroups">
             <van-button color="#3381F1" size="large" @click="handleLogin">去上传照片</van-button>
         </div>
-        {{hhh}}
+        <p class="tit">{{hhh}}</p>
+        userId:
+        <p class="tit">{{userId}}</p>
+        code:
+        <p class="tit">{{code}}</p>
+        <p class="tit">accessToken</p>
+        <p class="tit">{{accessToken}}</p>
     </div>
 </template>
 
 <script>
 import { login } from '@/api/sell'
+import { getAccessToken, getUserId } from '@/api/chat'
 import { Toast } from 'vant'
 export default {
     data () {
@@ -25,7 +32,10 @@ export default {
             form: {},
             username: '22222222',
             pwd: '',
-            hhh: ''
+            hhh: '',
+            code: '',
+            userId: '',
+            accessToken: ''
         }
     },
     created () {
@@ -37,8 +47,36 @@ export default {
     },
     mounted () {
         this.hhh = window.location.href
+        let arr = []
+        arr = this.hhh.split('&')
+        let arr1 = []
+        arr1 = arr[0].split('=')
+        // console.log(this.hhh)
+        this.code = arr1[1]
+        this.init()
     },
     methods: {
+        init () {
+            getAccessToken()
+                .then((res) => {
+                    if (res.code === 200) {
+                        this.accessToken = res.result
+                        this.getUder()
+                    }
+                })
+        },
+        getUder () {
+            const myData = {
+                token: this.accessToken,
+                code: this.code
+            }
+            Toast(myData.token)
+            Toast(myData.code)
+            getUserId(myData)
+                .then((res) => {
+                    this.userId = res.result
+                })
+        },
         handleLogin () {
             if (this.username === '') {
                 Toast('请输入工号')
@@ -95,6 +133,9 @@ export default {
         bottom: 1rem;
         // padding-top: 1rem;
         width: 100%;
+    }
+    .tit{
+        font-size: 0.2rem;
     }
 }
 </style>
